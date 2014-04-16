@@ -53,19 +53,11 @@ config = {
         database: {
         client: 'postgres',
         connection: {
-              host: process.env.DATABASE_URL,
-              user: process.env.DATABASE_USER,
-              password: process.env.DATABASE_PASSWORD,
-              database: process.env.DATABASE_NAME,
-              port: '5432'
-        },
-        database: {
-            client: 'sqlite3',
-            connection: {
-                filename: path.join(__dirname, '/content/data/ghost.db')
-            },
-            debug: false
-
+            host: process.env.DATABASE_URL,
+            user: process.env.DATABASE_USER,
+            password: process.env.DATABASE_PASSWORD,
+            database: process.env.DATABASE_NAME,
+            port: '5432'
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
