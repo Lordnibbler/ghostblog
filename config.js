@@ -51,19 +51,20 @@ config = {
         url: 'http://ghost-blog-radler.herokuapp.com',
         mail: {},
         database: {
-        client: 'postgres',
-        connection: {
-            host: process.env.DATABASE_URL,
-            user: process.env.DATABASE_USER,
-            password: process.env.DATABASE_PASSWORD,
-            database: process.env.DATABASE_NAME,
-            port: '5432'
-        },
-        server: {
-            // Host to be passed to node's `net.Server#listen()`
-            host: '0.0.0.0',
-            // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
-            port: process.env.PORT
+            client: 'postgres',
+            connection: {
+                host: process.env.DATABASE_URL,
+                user: process.env.DATABASE_USER,
+                password: process.env.DATABASE_PASSWORD,
+                database: process.env.DATABASE_NAME,
+                port: '5432'
+            },
+            server: {
+                // Host to be passed to node's `net.Server#listen()`
+                host: '0.0.0.0',
+                // Port to be passed to node's `net.Server#listen()`, for iisnode set this to `process.env.PORT`
+                port: process.env.PORT
+            }
         }
     },
 
