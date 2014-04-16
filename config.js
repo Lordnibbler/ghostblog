@@ -51,7 +51,7 @@ config = {
         url: 'http://ghost-blog-radler.herokuapp.com',
         mail: {},
         database: {
-            client: 'postgres',
+            client: 'pg',
             connection: {
                 host:     process.env.DATABASE_HOST,
                 user:     process.env.DATABASE_USER,
