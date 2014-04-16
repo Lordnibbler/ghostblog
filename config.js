@@ -58,7 +58,7 @@ config = {
               password: process.env.DATABASE_PASSWORD,
               database: process.env.DATABASE_NAME,
               port: '5432'
-        }
+        },
         database: {
             client: 'sqlite3',
             connection: {
