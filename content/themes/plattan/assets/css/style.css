@@ -90,9 +90,12 @@ code, kbd, pre, samp {
   font-size: 1em; }
 
 pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
+  background: #e1e1e0;
+  overflow:auto;
+  /* disable wrapping words to other lines; scroll instead! */
+  /* white-space: pre; */
+  /* white-space: pre-wrap; */
+  /* word-wrap: break-word; */ }
 
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
