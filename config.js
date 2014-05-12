@@ -49,7 +49,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://benradler.com',
-        mail: {},
+        mail: {
+        transport: 'SMTP',
+            options: {
+                service: 'Mailgun',
+                auth: {
+                    user: process.env.MAILGUN_USER,
+                    pass: process.env.MAILGUN_PASSWORD
+                }
+            }
+        },
         database: {
             client: 'postgres',
             connection: {
