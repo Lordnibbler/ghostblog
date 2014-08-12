@@ -26,12 +26,22 @@ config = {
         //  },
         // ```
 
+        // database: {
+        //     client: 'sqlite3',
+        //     connection: {
+        //         filename: path.join(__dirname, '/content/data/ghost-dev.db')
+        //     },
+        //     debug: false
+        // },
         database: {
-            client: 'sqlite3',
+            client: 'pg',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
-            },
-            debug: false
+                host:     'localhost',
+                user:     'meowingtons',
+                password: '',
+                database: 'ghost',
+                port: '5432'
+            }
         },
         server: {
             // Host to be passed to node's `net.Server#listen()`
@@ -60,7 +70,7 @@ config = {
             }
         },
         database: {
-            client: 'postgres',
+            client: 'pg',
             connection: {
                 host:     process.env.DATABASE_HOST,
                 user:     process.env.DATABASE_USER,
