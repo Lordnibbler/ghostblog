@@ -21,17 +21,15 @@
 					<span datetime="{{date format="YYYY-MM-DD"}}" itemprop="datePublished">
 						{{date format='dddd'}}, {{date format='DD MMM'}}
 					</span>
-					{{#if author}}
-						by {{author.name}}
-					{{/if}}
-		            {{#if tags}}
-		            	<div class="post-tags">
-		            		Tags:
-		                    {{#foreach tags}}
-			                    <span class="post-tag">{{name}}</span>,
-		                    {{/foreach}}
+					{{#author}}
+						by <a href="{{url}}">{{name}}</a>
+					{{/author}}
+	                {{#if tags}}
+	                	<div class="post-tags">
+	                		Tags:
+		                    {{tags seperator=", "}}
 		                </div>
-		            {{/if}}
+	                {{/if}}
 				</div>
 
 			    <div class="post-content" itemprop="articleBody">
