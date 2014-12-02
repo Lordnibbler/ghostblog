@@ -705,7 +705,7 @@ blockquote {
 .home-template blockquote:before {
   display: none; }
 
-code {
+p code {
   background: #e1e1e0;
   padding: 0 0.3em; }
 
